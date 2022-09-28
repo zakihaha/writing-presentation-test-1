@@ -26,16 +26,16 @@ touch pertemuan1.txt
 nano pertemuan1.txt
 rm pertemuan1.txt
 ```
-| Perintah | Fungsi |
-| ------ | ------ |
-| cd | Berpindah direktori |
-| ls | Melihat isi sebuah direktori |
-| cp | Untuk menyalin sebuah file |
-| mv | Untuk memindahkan file, mengganti nama file |
-| cat | Menampilkan isi file |
-| mkdir | Membuat sebuah direktori |
-| rmdir | Menghapus direktori |
-| pwd | Melihat current working directory |
+| Perintah | Fungsi                                      |
+| -------- | ------------------------------------------- |
+| cd       | Berpindah direktori                         |
+| ls       | Melihat isi sebuah direktori                |
+| cp       | Untuk menyalin sebuah file                  |
+| mv       | Untuk memindahkan file, mengganti nama file |
+| cat      | Menampilkan isi file                        |
+| mkdir    | Membuat sebuah direktori                    |
+| rmdir    | Menghapus direktori                         |
+| pwd      | Melihat current working directory           |
 
 ### File System Structure (Praktek)
 Membuat folder tugas yang berisi file halo.txt dan berisi folder html, css, javascript. Di dalam folder html terdapat file belajar.html, di dalam folder css terdapat file style.css.
@@ -167,17 +167,31 @@ index.html
     font-size: 30px
 }
 ```
-2. Internal CSS
-Membuat sebuah tag `<style>` di dalam tag `<head>` HTML.
+2. Mengakses attribute `class` HTML
+index.html
 ```sh
-<head>
-    <style>
-        .......
-    </style>
-</head>
+<h1 id="judul" class="namaku"></h1>
+```
+```sh
+#namaku {
+    color: red;
+    font-size: 30px
+}
+```
+3. Mengakses tag HTML
+index.html
+```sh
+<h1 id="judul" class="namaku"></h1>
+```
+```sh
+h1 {
+    color: red;
+    font-size: 30px
+}
 ```
 
-3. External CSS
+
+1. External CSS
 Memisahkan file HTML dan file CSS.
 
 ## Javascript
@@ -219,25 +233,25 @@ let year = 2020 + 2
 let score = 30 * 3
 // 90
 ```
-| Simbol | Fungsi |
-| ------ | ------ |
-| + | Penjumlahan |
-| - | Pengurangan |
-| * | Perkalian |
-| ** | Pemangkatan |
-| / | Pembagian |
-| % | Sisa hasil bagi |
+| Simbol | Fungsi          |
+| ------ | --------------- |
+| +      | Penjumlahan     |
+| -      | Pengurangan     |
+| *      | Perkalian       |
+| **     | Pemangkatan     |
+| /      | Pembagian       |
+| %      | Sisa hasil bagi |
 
 #### Perbandingan
 Operator relasi atau perbandingan adalah operator yang digunakan untuk `membandingkan dua nilai`.
-| Simbol | Fungsi |
-| ------ | ------ |
-| > | Lebih besar |
-| < | Lebih kecil |
-| == atau === | Sama dengan |
-| != atau !== | Tidak sama dengan |
-| >= | Lebih besar sama dengan |
-| <= | Lebih kecil sama dengan |
+| Simbol      | Fungsi                  |
+| ----------- | ----------------------- |
+| >           | Lebih besar             |
+| <           | Lebih kecil             |
+| == atau === | Sama dengan             |
+| != atau !== | Tidak sama dengan       |
+| >=          | Lebih besar sama dengan |
+| <=          | Lebih kecil sama dengan |
 
 ### Percabangan
 Digunakan untuk membuat alur program yang bercabang, biasanya dikenal dengan istilah `jika.. maka...`.
@@ -309,27 +323,29 @@ for(let i = 0; i < 10; i++){
 
 #### While
 While termasuk perulangan jenis uncounted loop karena tidak diketahui berapa banyak program akan diulang.
-```shkGit & Github Dasar
-let result = '';
-let i = 0;
+```sh
+let ulangi = confirm("Apakah anda mau mengulang?");
+let counter = 0;
 
-while(i < 5){
-    i = i + 1;
+while(ulangi){
+    let jawab = confirm("Apakah anda mau mengulang?")
+    counter++;
+    if(jawab == false){
+        ulangi = false;
+    }
 }
 ```
 
 #### Do While
 Mengeksekusi pernyataan tertentu hingga kondisi pengujian bernilai false. Kondisi dievaluasi setelah mengeksekusi pernyataan.
 ```sh
-let result = '';
-let i = 0;
+let ulangi = confirm("Apakah anda mau mengulang?");;
+let counter = 0;
 
 do {
-  i = i + 1;
-  result = result + i;
-} while (i < 5);
-
-console.log(result);
+    counter++;
+    ulangi = confirm("Apakah anda mau mengulang?");
+} while(ulangi)
 ```
 
 
@@ -341,21 +357,21 @@ Algoritma adalah sekumpulan instruksi atau langkah-langkah yang dituliskan secar
 Basic dari programming adalah penyelesaian permasalahan. Algoritma menjadi kunci penting agar developer dapat menciptakan solusi melalui code untuk menyelesaikan sebuah permasalahan. Sedangkan bahasa pemrograman, framework, tools yang lain hanyalah tambahan saja. Algoritma mengajarkan kita cara berpikir terstruktur.
 
 ### Ciri-ciri
-| Simbol | Fungsi |
-| ------ | ------ |
-| Input | Memiliki 0 atau lebih |
-| Output | Memiliki minimal 1 |
-| Definiteness | Instruksi tidak ambigu |
-| Finiteness | Memiliki titik berhenti |
+| Simbol        | Fungsi                    |
+| ------------- | ------------------------- |
+| Input         | Memiliki 0 atau lebih     |
+| Output        | Memiliki minimal 1        |
+| Definiteness  | Instruksi tidak ambigu    |
+| Finiteness    | Memiliki titik berhenti   |
 | Effectiveness | Tepat sasaran dan efisien |
 
 ### Jenis Proses
-| Simbol | Fungsi |
-| ------ | ------ |
-| Sequence | Instruksi dijalankan secara berurutan |
-| Selection | Dijalankan jika memenuhi kondisi |
-| Iteration | Dijalankan selama memenuhi kondisi |
-| Concurrent | Dijalankan secara bersamaan |
+| Simbol     | Fungsi                                |
+| ---------- | ------------------------------------- |
+| Sequence   | Instruksi dijalankan secara berurutan |
+| Selection  | Dijalankan jika memenuhi kondisi      |
+| Iteration  | Dijalankan selama memenuhi kondisi    |
+| Concurrent | Dijalankan secara bersamaan           |
 
 ### Penyajian
 1. Deskriptif
@@ -427,16 +443,16 @@ git remote add origin https://github.com/zakihaha/hello-git.git
 git push -u origin main
 ```
 
-| Perintah | Fungsi |
-| ------ | ------ |
-| git init | Membuat repository local |
-| git add . | Memasukkan perubahan ke staging area |
-| git commit | Simpan perubahan di local |
-| git status | Menampilkan daftar file yang berubah |
-| git push | Mengirim perubahan ke remote repository |
-| git checkout | Berpindah branch |
-| git pull | Menggabungkan perubahan di remote repository ke lokal |
-| git branch | Menggabungkan branch |
+| Perintah     | Fungsi                                                |
+| ------------ | ----------------------------------------------------- |
+| git init     | Membuat repository local                              |
+| git add .    | Memasukkan perubahan ke staging area                  |
+| git commit   | Simpan perubahan di local                             |
+| git status   | Menampilkan daftar file yang berubah                  |
+| git push     | Mengirim perubahan ke remote repository               |
+| git checkout | Berpindah branch                                      |
+| git pull     | Menggabungkan perubahan di remote repository ke lokal |
+| git branch   | Menggabungkan branch                                  |
 
 
 
