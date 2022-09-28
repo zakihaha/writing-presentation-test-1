@@ -190,10 +190,6 @@ h1 {
 }
 ```
 
-
-1. External CSS
-Memisahkan file HTML dan file CSS.
-
 ## Javascript
 ### Pengertian
 Javascript merupakan salah satu bahasa pemrograman untuk membangun website. Saat ini kepopuleran javascipt sedang naik bahkan di 2022, 98% website di dunia terdapat bahasa pemrograman javascript di dalamnya.
@@ -452,29 +448,7 @@ git push -u origin main
 | git push     | Mengirim perubahan ke remote repository               |
 | git checkout | Berpindah branch                                      |
 | git pull     | Menggabungkan perubahan di remote repository ke lokal |
-| git branch   | Menggabungkan branch                                  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| git merge    | Menggabungkan branch                                  |
 
 
 
