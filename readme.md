@@ -173,7 +173,7 @@ index.html
 <h1 id="judul" class="namaku"></h1>
 ```
 ```sh
-#namaku {
+.namaku {
     color: red;
     font-size: 30px
 }
